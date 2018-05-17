@@ -1,0 +1,14 @@
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }} - Game of Things</title>
+		{% else %}
+		<title>Welcome to Game of Things!</title>
+        {% endif %}
+	</head>
+	<body>
+		<div>Game of Things: <a href="/index">Home</a></div>
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>

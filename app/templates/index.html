@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Hey, {{ user.username }}!</h1>
+	{% for game in games %}
+    <div><p>
+    	Game ID: <b>{{game.id}}</b><br>
+    	<b>{{ game.gameMaster.username }}</b> is the Game Master.<br>
+    	The prompt is: <b>{{ game.prompt }}</b><br>
+    	Has game started? 
+    		{% if game.started %}<b>Yes</b>
+    		{% else %}<b>No</b>
+    		{% endif %}
+    </p></div>
+    {% endfor %}
+{% endblock %}
